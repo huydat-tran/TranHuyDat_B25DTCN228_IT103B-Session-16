@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quản Lý Nhân Viên</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="deptrai.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="mainTitle">Quản Lý Nhân Viên</h1>
+      </header>
+
+      <section class="form-section">
+        <form id="formEmployee">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName"
+                >Họ và tên <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Nhập họ và tên"
+              />
+              <span class="error" id="error-fullName"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="vd: ten@gmail.com"
+              />
+              <span class="error" id="error-email"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="dateOfBirth"
+                >Ngày sinh <span class="required">*</span></label
+              >
+              <input type="date" id="dateOfBirth" name="dateOfBirth" />
+              <span class="error" id="error-dob"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="position"
+                >Chức vụ <span class="required">*</span></label
+              >
+              <select id="position" name="position">
+                <option value="">-- Chọn chức vụ --</option>
+                <option value="Nhân viên">Nhân viên</option>
+                <option value="Trưởng nhóm">Trưởng nhóm</option>
+                <option value="Trưởng phòng">Trưởng phòng</option>
+                <option value="Giám đốc">Giám đốc</option>
+              </select>
+              <span class="error" id="error-position"></span>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+              Thêm Nhân Viên
+            </button>
+            <button type="reset" class="btn btn-secondary">Nhập Lại</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="table-section">
+        <div class="table-header">
+          <h2>Danh Sách Nhân Viên</h2>
+          <span class="badge"></span>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Họ và tên</th>
+                <th>Email</th>
+                <th>Ngày sinh</th>
+                <th>Chức vụ</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span></span>
+      </footer>
+    </div>
+
+    <script src="bodoi.js"></script>
+  </body>
+</html>
